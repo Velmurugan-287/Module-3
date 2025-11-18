@@ -1,30 +1,54 @@
 # Exp.No:3e
-## SEB - STRING SLICING
+## SEB - SEQUENCE OF UPPERCASE LETTERS
 
 ---
 
 ### AIM  
-To write a Python function that accepts a string and forms a new string by reversing the characters from the **4th position to the 10th position** with **alternate characters**, and then prints the new string.
 
+Write a Python program to find sequences of Upper case letters joined with a '@'.
 ---
 
 ### ALGORITHM
 
-1. Begin the program.  
-2. Accept a string as input.  
-3. Take a slice of the input string from index **2** to **10** (Python uses 0-based indexing, so index 2 refers to the 3rd character, i.e., the 4th character in natural terms).  
-4. Reverse the sliced substring.  
-5. Extract every second character from the reversed substring using slicing (`[::2]`).  
-6. Print the final processed string.  
-7. Terminate the program.
+1.Input: Receive a string input that might contain the target pattern.
+
+2.Define Pattern:
+
+  One or more uppercase letters ([A-Z]+)
+
+  The @ character
+
+  One or more uppercase letters ([A-Z]+)
+
+3.Use Regex:
+
+ Use Python's re module.
+
+4.Apply re.findall() with the pattern: r'\b[A-Z]+@[A-Z]+\b'
+
+5.Return: Output the list of all matching substrings.
+
+
 
 ---
 
 ### PROGRAM
 
 ```
+import re
+string=input()
+pattern=r'[A-Z]+@[A-Z]+'
+match=re.findall(pattern,string)
+if match:
+    print("Found a match!")
+else:
+    print("Not matched!")
 ```
 
 ### OUTPUT
 
+![Screenshot (198)](https://github.com/user-attachments/assets/4ed1f977-58dc-40e0-b4a7-b5939a7e52b7)
+
+
 ### RESULT
+Thus,the program to find sequences of Upper case letters joined with a '@' was implemented and executed successfully.
