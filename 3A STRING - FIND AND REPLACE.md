@@ -1,30 +1,41 @@
 # Exp.No:3a
-## STRING - FIND AND REPLACE
+## STRING -   SPLIT STRING
 
 ---
 
 ### AIM  
-To write a Python function to accept a string, identify a word to be replaced, and replace it with a new word provided by the user.
+Write a Python function that accepts the mail id and breaks the string based on "@" using an appropriate built in function.
 
 ---
 
 ### ALGORITHM
 
-1. Begin the program.  
-2. Input the original string `str1` and the word to be replaced `replace_str`.  
-3. Ask the user to input the new replacement word `str2`.  
-4. Use the `replace()` method in Python to replace all occurrences of `replace_str` in `str1` with `str2`.  
-5. Store the modified string in `str3`.  
-6. Display the original string (`str1`) and the modified string (`str3`).  
-7. Terminate the program.
+1.Input: Accept an email address as a string (e.g., "user@example.com").
+
+2.Check: Verify that the email contains the "@" character.
+
+3.Split: Use the built-in split() method to divide the string into two parts at the "@" character.
+
+4.Output: Return the username (before "@") and domain name (after "@") as a tuple.
+
+
 
 ---
 
 ### PROGRAM
 
 ```
+def splitstring(s1):
+    parts=s1.split("@")
+    if(len(parts)==2):
+        s2,s3=parts
+        print(f"['{s2}', '{s3}']")
 ```
 
 ### OUTPUT
 
+![Screenshot (194)](https://github.com/user-attachments/assets/e8c049ce-3f7d-4bb7-803e-b274f127ed4e)
+
+
 ### RESULT
+Thus, the program that  accepts the mail id and breaks the string based on "@" using an appropriate built in function was implemented and executed successfully.
