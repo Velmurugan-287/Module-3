@@ -1,29 +1,48 @@
 # Exp.No:3b  
-## REGEX - PATTERN MATCHING USING REGEX
+## REGEX - SEQUENCE OF LOWER CASE LETTERS
 
 ---
 
 ### AIM  
-To write a Python program that matches a string containing an `'a'` followed by **two to three `'b'` characters** using regular expressions.
+Write a Python program to find sequences of Lower case letters joined with a '@'.
 
 ---
 
 ### ALGORITHM
 
-1. Begin the program.  
-2. Accept a string `str1` from the user.  
-3. Define the regular expression pattern as `r"[a]+b{2,3}"`.  
-4. Use the `re.match()` function to check if the string `str1` matches the pattern.  
-5. If a match is found, print `"Found a match!"`.  
-6. If no match is found, print `"Not matched!"`.  
-7. Terminate the program.
+1.Input: Accept a string that may contain patterns of interest.
+
+2.Define Pattern: Use a regular expression to match:
+
+3.One or more lowercase letters ([a-z]+)
+
+4.An @ symbol
+
+5.One or more lowercase letters ([a-z]+)
+
+6.Use Regex: Apply re.findall() to extract all matching sequences.
+
+7.Output: Return or print the list of matches.
+
+
 
 ---
 
 ### PROGRAM
 
 ```
+import re
+string=input()
+pattern=r'[a-z]+@[a-z]+'
+match=re.findall(pattern,string)
+if match:
+    print("Found a match!")
+else:
+    print("Not matched!")
 ```
 ### OUTPUT
 
+![Screenshot (195)](https://github.com/user-attachments/assets/d9df8ddd-013f-44a5-9f91-14def536217b)
+
 ### RESULT
+Thus, the program to find sequences of Lower case letters joined with a '@' was implemented and executed successfully.
